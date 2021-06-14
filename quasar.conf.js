@@ -6,8 +6,11 @@
 // Configuration for your app
 // https://v1.quasar.dev/quasar-cli/quasar-conf-js
 
-module.exports = function (/* ctx */) {
+module.exports = function (ctx) {
   return {
+    build: {
+      distDir: ctx.mode.spa ? 'public' : null,
+    },
     // https://v1.quasar.dev/quasar-cli/supporting-ts
     supportTS: false,
 
